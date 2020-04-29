@@ -52,37 +52,37 @@ class ARDrone(object):
         """Make the drone hover."""
         self.at(ardrone.at.pcmd, False, 0, 0, 0, 0)
 
-    def move_left(self):
+    def move_left(self, speed):
         """Make the drone move left."""
-        self.at(ardrone.at.pcmd, True, -self.speed, 0, 0, 0)
+        self.at(ardrone.at.pcmd, True, -speed, 0, 0, 0)
 
-    def move_right(self):
+    def move_right(self, speed):
         """Make the drone move right."""
-        self.at(ardrone.at.pcmd, True, self.speed, 0, 0, 0)
+        self.at(ardrone.at.pcmd, True, speed, 0, 0, 0)
 
-    def move_up(self):
+    def move_up(self, speed):
         """Make the drone rise upwards."""
-        self.at(ardrone.at.pcmd, True, 0, 0, self.speed, 0)
+        self.at(ardrone.at.pcmd, True, 0, 0, speed, 0)
 
-    def move_down(self):
+    def move_down(self, speed):
         """Make the drone decent downwards."""
-        self.at(ardrone.at.pcmd, True, 0, 0, -self.speed, 0)
+        self.at(ardrone.at.pcmd, True, 0, 0, -speed, 0)
 
-    def move_forward(self):
+    def move_forward(self, speed):
         """Make the drone move forward."""
-        self.at(ardrone.at.pcmd, True, 0, -self.speed, 0, 0)
+        self.at(ardrone.at.pcmd, True, 0, -speed, 0, 0)
 
-    def move_backward(self):
+    def move_backward(self, speed):
         """Make the drone move backwards."""
-        self.at(ardrone.at.pcmd, True, 0, self.speed, 0, 0)
+        self.at(ardrone.at.pcmd, True, 0, speed, 0, 0)
 
-    def turn_left(self):
+    def turn_left(self, speed):
         """Make the drone rotate left."""
-        self.at(ardrone.at.pcmd, True, 0, 0, 0, -self.speed)
+        self.at(ardrone.at.pcmd, True, 0, 0, 0, -speed)
 
-    def turn_right(self):
+    def turn_right(self, speed):
         """Make the drone rotate right."""
-        self.at(ardrone.at.pcmd, True, 0, 0, 0, self.speed)
+        self.at(ardrone.at.pcmd, True, 0, 0, 0, speed)
 
     def reset(self):
         """Toggle the drone's emergency state."""
